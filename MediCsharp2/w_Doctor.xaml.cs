@@ -97,7 +97,7 @@ namespace MediCsharp2
                 datos.Entry(d).State = System.Data.Entity.EntityState.Modified;
                 datos.SaveChanges();
                 CargarDatosGrilla();
-             }
+            }
             MessageBox.Show("Se ha Modificado Correctamente!");
         }
 
