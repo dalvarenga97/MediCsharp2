@@ -43,6 +43,14 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.2.0.325, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.2.0\lib\net45\MaterialDesignColors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.6.0.325, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.2.6.0\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
@@ -66,23 +74,26 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Modelo2.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Modelo2.Context.tt</DependentUpon>
+    <Compile Include="Doctor.cs">
+      <DependentUpon>Modelo3.tt</DependentUpon>
     </Compile>
-    <Compile Include="Modelo2.cs">
+    <Compile Include="Modelo3.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Modelo2.tt</DependentUpon>
+      <DependentUpon>Modelo3.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Modelo2.Designer.cs">
+    <Compile Include="Modelo3.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Modelo2.edmx</DependentUpon>
+      <DependentUpon>Modelo3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Modelo3.edmx</DependentUpon>
     </Compile>
     <Compile Include="Paciente.cs">
-      <DependentUpon>Modelo2.tt</DependentUpon>
+      <DependentUpon>Modelo3.tt</DependentUpon>
     </Compile>
     <Compile Include="w_Doctor.xaml.cs">
       <DependentUpon>w_Doctor.xaml</DependentUpon>
@@ -90,16 +101,8 @@
     <Compile Include="w_Paciente.xaml.cs">
       <DependentUpon>w_Paciente.xaml</DependentUpon>
     </Compile>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="w_Doctor.xaml">
@@ -129,12 +132,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Modelo2.edmx">
+    <EntityDeploy Include="Modelo3.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Modelo2.Designer.cs</LastGenOutput>
+      <LastGenOutput>Modelo3.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Modelo2.edmx.diagram">
-      <DependentUpon>Modelo2.edmx</DependentUpon>
+    <None Include="Modelo3.edmx.diagram">
+      <DependentUpon>Modelo3.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -150,15 +153,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Modelo2.Context.tt">
+    <Content Include="Modelo3.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Modelo2.edmx</DependentUpon>
-      <LastGenOutput>Modelo2.Context.cs</LastGenOutput>
+      <DependentUpon>Modelo3.edmx</DependentUpon>
+      <LastGenOutput>Modelo3.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Modelo2.tt">
+    <Content Include="Modelo3.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Modelo2.edmx</DependentUpon>
-      <LastGenOutput>Modelo2.cs</LastGenOutput>
+      <DependentUpon>Modelo3.edmx</DependentUpon>
+      <LastGenOutput>Modelo3.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

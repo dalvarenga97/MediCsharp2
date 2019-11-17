@@ -5,29 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MediCsharp2"
         mc:Ignorable="d"
-        Title="w_Doctor" Height="600" Width="800" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+        Title="w_Doctor" Height="600" Width="900" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Canvas>
-        <Label x:Name="label" Content="Id:" Canvas.Left="10" Canvas.Top="10"/>
-        <Label x:Name="label_Copy" Content="Nomnbre:" Canvas.Left="10" Canvas.Top="68"/>
-        <Label x:Name="label_Copy1" Content="Apellido:" Canvas.Left="10" Canvas.Top="127"/>
-        <Label x:Name="label_Copy2" Content="Especialidad:" Canvas.Left="10" Canvas.Top="196"/>
-        <Label x:Name="label_Copy3" Content="Sexo:" Canvas.Left="10" Canvas.Top="266" RenderTransformOrigin="0.487,0.462"/>
-        <Label x:Name="label_Copy4" Content="Edad:" Canvas.Left="10" Canvas.Top="333" RenderTransformOrigin="0.487,0.462"/>
-        <Label x:Name="label_Copy5" Content="Fecha Nacimiento:" Canvas.Left="10" Canvas.Top="398" RenderTransformOrigin="0.487,0.462"/>
-        <Label x:Name="label_Copy6" Content="Telefono:" Canvas.Left="10" Canvas.Top="456" RenderTransformOrigin="0.487,0.462"/>
-        <TextBox x:Name="txtId" Height="23" Canvas.Left="136" TextWrapping="Wrap" Text="" Canvas.Top="14" Width="120"/>
-        <TextBox x:Name="txtNombreDoctor" Height="23" Canvas.Left="136" TextWrapping="Wrap" Text="" Canvas.Top="68" Width="120"/>
-        <TextBox x:Name="txtApellidoDoctor" Height="23" Canvas.Left="136" TextWrapping="Wrap" Text="" Canvas.Top="127" Width="120"/>
-        <TextBox x:Name="txtEspecialidad" Height="23" Canvas.Left="136" TextWrapping="Wrap" Text="" Canvas.Top="196" Width="120"/>
-        <TextBox x:Name="txtEdad" Height="23" Canvas.Left="136" TextWrapping="Wrap" Text="" Canvas.Top="333" Width="120"/>
-        <TextBox x:Name="txtTelefono" Height="23" Canvas.Left="136" TextWrapping="Wrap" Text="" Canvas.Top="456" Width="120"/>
-        <DatePicker x:Name="dtpFechaNac" Canvas.Left="136" Canvas.Top="398"/>
-        <DataGrid x:Name="dgDoctor" MouseDoubleClick="dgDoctor_MouseDoubleClick" Canvas.Left="299" Canvas.Top="14" Height="342" Width="483"/>
-        <RadioButton x:Name="rdbF" Content="Femenino" Canvas.Left="132" Canvas.Top="271"/>
-        <RadioButton x:Name="rdbM" Content="Masculino" Canvas.Left="208" Canvas.Top="271"/>
-        <Button x:Name="btnAgregar" Content="Agregar" Canvas.Left="136" Canvas.Top="513" Width="75" Click="btnAgregar_Click"/>
-        <Button x:Name="btnModificar" Content="Modificar" Canvas.Left="254" Canvas.Top="513" Width="76" Click="btnModificar_Click"/>
-        <Button x:Name="btnEliminar" Content="Eliminar" Canvas.Left="377" Canvas.Top="513" Width="76" Click="btnEliminar_Click"/>
-        <Button x:Name="btnLimpiar" Content="Limpiar" Canvas.Left="496" Canvas.Top="513" Width="76" Click="btnLimpiar_Click"/>
+        <Label x:Name="label" Content="Id:" Canvas.Left="94" Canvas.Top="17"/>
+        <Label x:Name="label_Copy" Content="Nomnbre:" Canvas.Left="54" Canvas.Top="68"/>
+        <Label x:Name="label_Copy1" Content="Apellido:" Canvas.Left="61" Canvas.Top="132"/>
+        <Label x:Name="label_Copy2" Content="Especialidad:" Canvas.Left="39" Canvas.Top="193"/>
+        <Label x:Name="label_Copy3" Content="Sexo:" Canvas.Left="79" Canvas.Top="247" RenderTransformOrigin="0.487,0.462"/>
+        <Label x:Name="label_Copy4" Content="Edad:" Canvas.Left="78" Canvas.Top="315" RenderTransformOrigin="0.487,0.462"/>
+        <Label x:Name="label_Copy5" Content="Fecha Nacimiento:" Canvas.Left="10" Canvas.Top="368" RenderTransformOrigin="0.487,0.462"/>
+        <Label x:Name="label_Copy6" Content="Telefono:" Canvas.Left="54" Canvas.Top="434" RenderTransformOrigin="0.487,0.462"/>
+        <TextBox x:Name="txtId" Height="30" Canvas.Left="146" TextWrapping="Wrap" Text="" Canvas.Top="10" Width="195"/>
+        <TextBox x:Name="txtNombreDoctor" Height="36" Canvas.Left="147" TextWrapping="Wrap" Text="" Canvas.Top="58" Width="203"/>
+        <TextBox x:Name="txtApellidoDoctor" Height="36" Canvas.Left="146" TextWrapping="Wrap" Text="" Canvas.Top="122" Width="203"/>
+        <TextBox x:Name="txtEspecialidad" Height="36" Canvas.Left="146" TextWrapping="Wrap" Text="" Canvas.Top="183" Width="195"/>
+        <TextBox x:Name="txtEdad" Height="39" Canvas.Left="137" TextWrapping="Wrap" Text="" Canvas.Top="294" Width="213"/>
+        <TextBox x:Name="txtTelefono" Height="34" Canvas.Left="137" TextWrapping="Wrap" Text="" Canvas.Top="423" Width="213"/>
+        <DatePicker x:Name="dtpFechaNac" Canvas.Left="136" Canvas.Top="358" Height="36" Width="213"/>
+        <DataGrid x:Name="dgDoctor" MouseDoubleClick="dgDoctor_MouseDoubleClick" Canvas.Left="377" Canvas.Top="17" Height="377" Width="483"/>
+        <RadioButton x:Name="rdbF" Content="Femenino" Canvas.Left="157" Canvas.Top="255"/>
+        <RadioButton x:Name="rdbM" Content="Masculino" Canvas.Left="274" Canvas.Top="255"/>
+        <Button x:Name="btnAgregar" Content="Agregar" Canvas.Left="157" Canvas.Top="513" Width="101" Click="btnAgregar_Click"/>
+        <Button x:Name="btnModificar" Content="Modificar" Canvas.Left="292" Canvas.Top="513" Width="96" Click="btnModificar_Click"/>
+        <Button x:Name="btnEliminar" Content="Eliminar" Canvas.Left="422" Canvas.Top="513" Width="109" Click="btnEliminar_Click"/>
+        <Button x:Name="btnLimpiar" Content="Limpiar" Canvas.Left="568" Canvas.Top="513" Width="108" Click="btnLimpiar_Click"/>
     </Canvas>
 </Window>

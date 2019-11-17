@@ -19,12 +19,12 @@ namespace MediCsharp2
     /// </summary>
     public partial class w_Doctor : Window
     {
-        MediCsharp4Entities datos;
+        MediCsharp12Entities datos;
 
         public w_Doctor()
         {
             InitializeComponent();
-            datos = new MediCsharp4Entities();
+            datos = new MediCsharp12Entities();
         }
 
         private void CargarDatosGrilla()
@@ -42,6 +42,7 @@ namespace MediCsharp2
 
         private void LimpiarForm()
         {
+            txtId.Text = string.Empty;
             txtNombreDoctor.Text = string.Empty;
             txtApellidoDoctor.Text = string.Empty;
             txtEspecialidad.Text = string.Empty;

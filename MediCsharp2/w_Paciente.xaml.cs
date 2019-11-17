@@ -19,17 +19,29 @@ namespace MediCsharp2
     /// </summary>
     public partial class w_Paciente : Window
     {
-        MediCsharp10Entities datos;
+        MediCsharp12Entities datos;
         public w_Paciente()
         {
             InitializeComponent();
-            datos = new MediCsharp10Entities();
+            datos = new MediCsharp12Entities();
         }
         void CargarGrilla()
         {
             dgPacientes.ItemsSource = datos.Paciente.ToList();
         }
 
+        void limpiar()
+        {
+            txtId.Text = string.Empty;
+            txtNombre.Text = string.Empty;
+            txtApellido.Text = string.Empty;
+            txtEdad.Text = string.Empty;
+            rdbMasculino.IsChecked = true;
+            dtpFecha.SelectedDate = DateTime.Now.Date;
+            txtTelefono.Text = string.Empty;
+        }
+
+       
         private void dgPacientes_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             if (dgPacientes.SelectedItem != null)
@@ -66,10 +78,12 @@ namespace MediCsharp2
 
             P.FechaNacimiento = dtpFecha.SelectedDate;
             P.Telefono = txtTelefono.Text;
+            MessageBox.Show("Se ha Agregado Correctamente");
 
             datos.Paciente.Add(P);
             datos.SaveChanges();
             CargarGrilla();
+            limpiar();
         }
 
         private void btnModificar_Click(object sender, RoutedEventArgs e)
@@ -87,26 +101,21 @@ namespace MediCsharp2
                 else
                     P.sexo = rdbFemenino.Content.ToString();
 
-                //dtpFecha.SelectedDate = DateTime.Now.Date;
                 P.FechaNacimiento = dtpFecha.SelectedDate;
                 P.Telefono = txtTelefono.Text;
+                MessageBox.Show("Se ha Modificado Correctamente!");
 
                 datos.Entry(P).State = System.Data.Entity.EntityState.Modified;
                 datos.SaveChanges();
                 CargarGrilla();
+                limpiar();
 
             }
         }
 
         private void btnLimpiar_Click(object sender, RoutedEventArgs e)
         {
-            txtId.Text = string.Empty;
-            txtNombre.Text = string.Empty;
-            txtApellido.Text = string.Empty;
-            txtEdad.Text = string.Empty;
-            rdbMasculino.IsChecked = true;
-            dtpFecha.SelectedDate = DateTime.Now.Date;
-            txtTelefono.Text = string.Empty;
+            limpiar();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -126,6 +135,8 @@ namespace MediCsharp2
             }
             else
                 MessageBox.Show("Debe seleccionar una Paciente de la grilla para eliminar!");
+            limpiar();
         }
+
     }
 }

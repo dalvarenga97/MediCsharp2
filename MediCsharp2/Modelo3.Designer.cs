@@ -1,4 +1,4 @@
-﻿// La generación de código T4 está habilitada para el modelo 'C:\Users\alumno-201\Documents\Medisharp2\MediCsharp2\Modelo2.edmx'. 
+﻿// La generación de código T4 está habilitada para el modelo 'c:\users\dalvarenga.swooshnet\documents\visual studio 2015\Projects\MediCsharp2\MediCsharp2\Modelo3.edmx'. 
 // Para habilitar la generación de código heredada, cambie el valor de la propiedad del diseñador 'Estrategia de generación de código'
 // por 'ObjectContext heredado'. Esta propiedad está disponible en la ventana Propiedades cuando se abre
 // el modelo en el diseñador.
