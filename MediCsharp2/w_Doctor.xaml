@@ -8,7 +8,7 @@
         Title="w_Doctor" Height="600" Width="900" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Canvas>
         <Label x:Name="label" Content="Id:" Canvas.Left="94" Canvas.Top="17"/>
-        <Label x:Name="label_Copy" Content="Nomnbre:" Canvas.Left="54" Canvas.Top="68"/>
+        <Label x:Name="label_Copy" Content="Nombre:" Canvas.Left="54" Canvas.Top="68"/>
         <Label x:Name="label_Copy1" Content="Apellido:" Canvas.Left="61" Canvas.Top="132"/>
         <Label x:Name="label_Copy2" Content="Especialidad:" Canvas.Left="39" Canvas.Top="193"/>
         <Label x:Name="label_Copy3" Content="Sexo:" Canvas.Left="79" Canvas.Top="247" RenderTransformOrigin="0.487,0.462"/>

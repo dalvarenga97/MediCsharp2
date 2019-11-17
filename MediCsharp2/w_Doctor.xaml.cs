@@ -55,6 +55,8 @@ namespace MediCsharp2
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             CargarDatosGrilla();
+            dgDoctor.Columns[8].Visibility = Visibility.Hidden;
+            dgDoctor.Columns[9].Visibility = Visibility.Hidden;
         }
 
         private void btnAgregar_Click(object sender, RoutedEventArgs e)

@@ -28,6 +28,8 @@ namespace MediCsharp2
         void CargarGrilla()
         {
             dgPacientes.ItemsSource = datos.Paciente.ToList();
+            dgPacientes.Columns[7].Visibility = Visibility.Hidden;
+            dgPacientes.Columns[8].Visibility = Visibility.Hidden;
         }
 
         void limpiar()
