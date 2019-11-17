@@ -98,6 +98,9 @@
     <Compile Include="Paciente.cs">
       <DependentUpon>Modelo3.tt</DependentUpon>
     </Compile>
+    <Compile Include="w_Consulta.xaml.cs">
+      <DependentUpon>w_Consulta.xaml</DependentUpon>
+    </Compile>
     <Compile Include="w_Doctor.xaml.cs">
       <DependentUpon>w_Doctor.xaml</DependentUpon>
     </Compile>
@@ -109,6 +112,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="w_Consulta.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
