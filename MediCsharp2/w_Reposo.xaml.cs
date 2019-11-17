@@ -15,15 +15,15 @@ using System.Windows.Shapes;
 namespace MediCsharp2
 {
     /// <summary>
-    /// Lógica de interacción para w_Consulta.xaml
+    /// Lógica de interacción para w_Reposo.xaml
     /// </summary>
-    public partial class w_Consulta : Window
+    public partial class w_Reposo : Window
     {
+
         MediCsharp20Entities datos;
-        public w_Consulta()
+        public w_Reposo()
         {
             datos = new MediCsharp20Entities();
-
             InitializeComponent();
         }
 
@@ -31,37 +31,13 @@ namespace MediCsharp2
         {
             cboNombreDoctor.ItemsSource = datos.Doctor.ToList();
             cboNombreDoctor.DisplayMemberPath = "NombreDoctor";
-            cboNombreDoctor.SelectedValuePath = "NombreDoctor";
+            cboNombreDoctor.SelectedValuePath = "Doctor_Id";
 
 
             cboNombrePaciente.ItemsSource = datos.Paciente.ToList();
             cboNombrePaciente.DisplayMemberPath = "NombrePaciente";
-            cboNombrePaciente.SelectedValuePath = "NombrePaciente";
+            cboNombrePaciente.SelectedValuePath = "Paciente_Id";
             CargarDatosGrilla();
-        }
-
-        private void btnAgregar_Click(object sender, RoutedEventArgs e)
-        {
-            Consulta c = new Consulta();
-            c.Doctor = (Doctor)cboNombreDoctor.SelectedItem;
-            c.Paciente = (Paciente)cboNombrePaciente.SelectedItem;
-            c.FechaConsulta = dtpFechaConsulta.DisplayDate;
-            c.Diagnostico = txtDiagnostico.Text;
-            MessageBox.Show("Se ha Agregado Correctamente");
-
-            datos.Consulta.Add(c);
-            datos.SaveChanges();
-            CargarDatosGrilla();
-            LimpiarForm();
-        }
-
-        private void LimpiarForm()
-        {
-            txtId.Text = string.Empty;
-            cboNombreDoctor.SelectedIndex = -1;
-            cboNombrePaciente.SelectedIndex = -1;            
-            dtpFechaConsulta.SelectedDate = DateTime.Now.Date;
-            txtDiagnostico.Text = string.Empty;
         }
 
 
@@ -69,15 +45,41 @@ namespace MediCsharp2
         {
             try
             {
-                dgConsultas.ItemsSource = datos.Consulta.ToList();
-                dgConsultas.Columns[5].Visibility = Visibility.Hidden;
-                dgConsultas.Columns[6].Visibility = Visibility.Hidden;
+                dgReposo.ItemsSource = datos.Reposo.ToList();
+                dgReposo.Columns[5].Visibility = Visibility.Hidden;
+                dgReposo.Columns[6].Visibility = Visibility.Hidden;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void btnAgregar_Click(object sender, RoutedEventArgs e)
+        {
+            Reposo r = new Reposo();
+            r.Doctor = (Doctor)cboNombreDoctor.SelectedItem;
+            r.Paciente = (Paciente)cboNombrePaciente.SelectedItem;
+            r.FechaDesde = dtpFechaDesde.SelectedDate;
+            r.FechaHasta = dtpFechaHasta.SelectedDate;
+
+            MessageBox.Show("Se ha Agregado Correctamente");
+
+            datos.Reposo.Add(r);
+            datos.SaveChanges();
+            CargarDatosGrilla();
+            LimpiarForm();
+        }
+
+
+        private void LimpiarForm()
+        {
+            txtId.Text = string.Empty;
+            cboNombreDoctor.SelectedIndex = -1;
+            cboNombrePaciente.SelectedIndex = -1;
+            dtpFechaDesde.SelectedDate = DateTime.Now.Date;
+            dtpFechaHasta.SelectedDate = DateTime.Now.Date;
         }
     }
 }

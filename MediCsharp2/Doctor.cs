@@ -18,6 +18,7 @@ namespace MediCsharp2
         public Doctor()
         {
             this.Consulta = new HashSet<Consulta>();
+            this.Reposo = new HashSet<Reposo>();
         }
     
         public int Id { get; set; }
@@ -31,5 +32,7 @@ namespace MediCsharp2
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Consulta> Consulta { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Reposo> Reposo { get; set; }
     }
 }

@@ -43,5 +43,11 @@ namespace MediCsharp2
             w_Consulta ventanaConsulta = new w_Consulta();
             ventanaConsulta.ShowDialog();
         }
+
+        private void Reposos_Click(object sender, RoutedEventArgs e)
+        {
+            w_Reposo ventanaReposo = new w_Reposo();
+            ventanaReposo.ShowDialog();
+        }
     }
 }

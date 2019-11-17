@@ -75,31 +75,34 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Consulta.cs">
-      <DependentUpon>Modelo10.tt</DependentUpon>
+      <DependentUpon>Modelo11.tt</DependentUpon>
     </Compile>
     <Compile Include="Doctor.cs">
-      <DependentUpon>Modelo10.tt</DependentUpon>
+      <DependentUpon>Modelo11.tt</DependentUpon>
     </Compile>
     <Compile Include="Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Modelo10.Context.cs">
+    <Compile Include="Modelo11.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Modelo10.Context.tt</DependentUpon>
+      <DependentUpon>Modelo11.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Modelo10.cs">
+    <Compile Include="Modelo11.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Modelo10.tt</DependentUpon>
+      <DependentUpon>Modelo11.tt</DependentUpon>
     </Compile>
-    <Compile Include="Modelo10.Designer.cs">
+    <Compile Include="Modelo11.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Modelo10.edmx</DependentUpon>
+      <DependentUpon>Modelo11.edmx</DependentUpon>
     </Compile>
     <Compile Include="Paciente.cs">
-      <DependentUpon>Modelo10.tt</DependentUpon>
+      <DependentUpon>Modelo11.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Reposo.cs">
+      <DependentUpon>Modelo11.tt</DependentUpon>
     </Compile>
     <Compile Include="w_Consulta.xaml.cs">
       <DependentUpon>w_Consulta.xaml</DependentUpon>
@@ -114,6 +117,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="w_Reposo.xaml.cs">
+      <DependentUpon>w_Reposo.xaml</DependentUpon>
+    </Compile>
     <Page Include="Menu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -127,6 +133,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="w_Paciente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="w_Reposo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -149,12 +159,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Modelo10.edmx">
+    <EntityDeploy Include="Modelo11.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Modelo10.Designer.cs</LastGenOutput>
+      <LastGenOutput>Modelo11.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Modelo10.edmx.diagram">
-      <DependentUpon>Modelo10.edmx</DependentUpon>
+    <None Include="Modelo11.edmx.diagram">
+      <DependentUpon>Modelo11.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -170,15 +180,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Modelo10.Context.tt">
+    <Content Include="Modelo11.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Modelo10.edmx</DependentUpon>
-      <LastGenOutput>Modelo10.Context.cs</LastGenOutput>
+      <DependentUpon>Modelo11.edmx</DependentUpon>
+      <LastGenOutput>Modelo11.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Modelo10.tt">
+    <Content Include="Modelo11.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Modelo10.edmx</DependentUpon>
-      <LastGenOutput>Modelo10.cs</LastGenOutput>
+      <DependentUpon>Modelo11.edmx</DependentUpon>
+      <LastGenOutput>Modelo11.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

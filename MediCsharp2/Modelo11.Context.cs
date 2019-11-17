@@ -13,10 +13,10 @@ namespace MediCsharp2
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MediCsharp19Entities : DbContext
+    public partial class MediCsharp20Entities : DbContext
     {
-        public MediCsharp19Entities()
-            : base("name=MediCsharp19Entities")
+        public MediCsharp20Entities()
+            : base("name=MediCsharp20Entities")
         {
         }
     
@@ -28,5 +28,6 @@ namespace MediCsharp2
         public virtual DbSet<Consulta> Consulta { get; set; }
         public virtual DbSet<Doctor> Doctor { get; set; }
         public virtual DbSet<Paciente> Paciente { get; set; }
+        public virtual DbSet<Reposo> Reposo { get; set; }
     }
 }
