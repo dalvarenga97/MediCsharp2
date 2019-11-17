@@ -14,6 +14,12 @@ namespace MediCsharp2
     
     public partial class Doctor
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Doctor()
+        {
+            this.Consulta = new HashSet<Consulta>();
+        }
+    
         public int Id { get; set; }
         public string NombreDoctor { get; set; }
         public string ApellidoDoctor { get; set; }
@@ -22,5 +28,8 @@ namespace MediCsharp2
         public string Edad { get; set; }
         public Nullable<System.DateTime> FechaNacimiento { get; set; }
         public string Telefono { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Consulta> Consulta { get; set; }
     }
 }

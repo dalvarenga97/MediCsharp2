@@ -19,12 +19,12 @@ namespace MediCsharp2
     /// </summary>
     public partial class w_Doctor : Window
     {
-        MediCsharp12Entities datos;
+        MediCsharp19Entities datos;
 
         public w_Doctor()
         {
             InitializeComponent();
-            datos = new MediCsharp12Entities();
+            datos = new MediCsharp19Entities();
         }
 
         private void CargarDatosGrilla()
@@ -144,5 +144,9 @@ namespace MediCsharp2
             }
             MessageBox.Show("Se ha Eliminado Correctamente!!");
         }
+
+
+
+
     }
 }

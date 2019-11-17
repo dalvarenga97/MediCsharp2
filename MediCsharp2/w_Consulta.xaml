@@ -5,13 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MediCsharp2"
         mc:Ignorable="d"
-        Title="w_Consulta" Height="500" Width="800">
+        Title="w_Consulta" Height="500" Width="900" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Canvas>
         <GroupBox x:Name="groupBox" Header="Datos Consulta" Canvas.Left="10" Canvas.Top="49" Height="299" Width="373"/>
-        <GroupBox x:Name="groupBox_Copy" Header="Consultas Grabadas" Canvas.Left="409" Canvas.Top="49" Height="299" Width="373"/>
+        <GroupBox x:Name="groupBox_Copy" Header="Consultas Grabadas" Canvas.Left="409" Canvas.Top="49" Height="299" Width="448"/>
         <Label x:Name="label" Content="Consultas" Canvas.Left="320" Canvas.Top="-4" FontFamily="Script MT Bold" FontSize="36"/>
-        <Button x:Name="btnAgregar" Content="Agregar Consulta" Canvas.Left="94" Canvas.Top="378" Width="207"/>
-        <Button x:Name="btnEliminar" Content="Eliminar Consulta" Canvas.Left="468" Canvas.Top="378" Width="206"/>
+        <Button x:Name="btnAgregar" Click="btnAgregar_Click" Content="Agregar Consulta" Canvas.Left="302" Canvas.Top="392" Width="208"/>
         <Label x:Name="label1" Content="Id:" Canvas.Left="85" Canvas.Top="87"/>
         <Label x:Name="label2" Content="Nombre Paciente:" Canvas.Left="10" Canvas.Top="134"/>
         <Label x:Name="label3" Content="Nombre Doctor:" Canvas.Left="17" Canvas.Top="182"/>
@@ -22,7 +21,7 @@
         <ComboBox x:Name="cboNombrePaciente" Canvas.Left="131" Canvas.Top="132" Width="199"/>
         <ComboBox x:Name="cboNombreDoctor" Canvas.Left="131" Canvas.Top="180" Width="199"/>
         <DatePicker x:Name="dtpFechaConsulta" Canvas.Left="131" Canvas.Top="238" Width="199" Height="26"/>
-        <DataGrid x:Name="dgConsultas" Canvas.Left="417" Canvas.Top="93" Height="242" Width="359"/>
+        <DataGrid x:Name="dgConsultas" Canvas.Left="417" Canvas.Top="93" Height="242" Width="422"/>
 
     </Canvas>
 </Window>

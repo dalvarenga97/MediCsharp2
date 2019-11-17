@@ -17,6 +17,7 @@
         </MenuItem>
         
         <MenuItem Header="Procesos" Height="33" Width="252">
+            <MenuItem Header="Consultas" Name="Consultas" Click="Consultas_Click" />
                         
             <Separator />
             <MenuItem Header="Salir" />

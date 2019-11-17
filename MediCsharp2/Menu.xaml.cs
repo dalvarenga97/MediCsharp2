@@ -37,5 +37,11 @@ namespace MediCsharp2
             w_Paciente ventanaPaciente = new w_Paciente();
             ventanaPaciente.ShowDialog();
         }
+
+        private void Consultas_Click(object sender, RoutedEventArgs e)
+        {
+            w_Consulta ventanaConsulta = new w_Consulta();
+            ventanaConsulta.ShowDialog();
+        }
     }
 }

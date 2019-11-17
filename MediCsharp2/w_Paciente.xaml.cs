@@ -19,11 +19,11 @@ namespace MediCsharp2
     /// </summary>
     public partial class w_Paciente : Window
     {
-        MediCsharp12Entities datos;
+        MediCsharp19Entities datos;
         public w_Paciente()
         {
             InitializeComponent();
-            datos = new MediCsharp12Entities();
+            datos = new MediCsharp19Entities();
         }
         void CargarGrilla()
         {
