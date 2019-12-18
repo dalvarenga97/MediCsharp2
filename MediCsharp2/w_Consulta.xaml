@@ -21,7 +21,7 @@
         <ComboBox x:Name="cboNombrePaciente" Canvas.Left="131" Canvas.Top="132" Width="199"/>
         <ComboBox x:Name="cboNombreDoctor" Canvas.Left="131" Canvas.Top="180" Width="199"/>
         <DatePicker x:Name="dtpFechaConsulta" Canvas.Left="131" Canvas.Top="238" Width="199" Height="26"/>
-        <DataGrid x:Name="dgConsultas" Canvas.Left="417" Canvas.Top="93" Height="242" Width="422"/>
+        <DataGrid x:Name="dgConsultas" Canvas.Left="417" Canvas.Top="93" Height="242" Width="422" SelectionChanged="dgConsultas_SelectionChanged"/>
 
     </Canvas>
 </Window>

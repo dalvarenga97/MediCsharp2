@@ -79,5 +79,10 @@ namespace MediCsharp2
             }
 
         }
+
+        private void dgConsultas_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
